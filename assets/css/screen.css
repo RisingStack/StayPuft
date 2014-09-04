@@ -700,7 +700,7 @@ main
 
 #sidebar-links a:hover
 {
-    color: white;
+    color: #A2B537;
 }
 
 .post-indexfooter
@@ -803,7 +803,7 @@ main
     color: #9EABB3;
 }
 .author-meta a:hover {
-    color: #57A3E8;
+    color: #A2B537;
 }
 
 /* Create some space to the right for the share links */
@@ -972,7 +972,7 @@ main
 }
 
 .site-footer a:hover {
-    color: white;
+    color: A2B537;
 }
 
 .poweredby .icon-ghost {
