@@ -468,7 +468,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .blog-title a {
-    color: white;
+    color: #123E2D;
     text-decoration: none;
 }
 
@@ -511,7 +511,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-title {
     margin:0;
-    color: #b3cc57;
+    color: #123E2D;
 }
 
 .post-title a {
@@ -963,11 +963,11 @@ main
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: #e6e9eb;
+    color: #123E2D;
 }
 
 .site-footer a {
-    color: #e6e9eb;
+    color: #123E2D;
     text-decoration: none;
 }
 
