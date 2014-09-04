@@ -444,10 +444,13 @@ margin on the iframe, cause it breaks stuff. */
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
+#sidebar-header {
+    background-color: #f8f8f8;
+}
 
 #sidebar-content {
     position: relative;
-    top: 4rem;
+    top: 1rem;
 }
 
 /* Yo-logo. Yolo-go. Upload one in ghost/settings/ */
@@ -602,7 +605,7 @@ margin on the iframe, cause it breaks stuff. */
     width: 370px;
     height: 100%;
     z-index: 100;
-    background-color: #D6D6D6;
+    background-color: #39a67b;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
 }
@@ -1096,6 +1099,7 @@ main
     #sidebar-links li {
         display: inline-block;
         margin: 0px 4px;
+        color: #ffffff;
     }
 }
 
