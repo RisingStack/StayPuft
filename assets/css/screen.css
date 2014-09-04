@@ -341,7 +341,6 @@ kbd {
     padding: 1px 8px;
     border: #ccc 1px solid;
     color: #666;
-    text-shadow: #fff 0 1px 0;
     font-size: 0.9em;
     font-weight: bold;
     background: #f4f4f4;
@@ -463,7 +462,6 @@ margin on the iframe, cause it breaks stuff. */
     margin: 10px 0 10px 0;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
-    text-shadow: 0 1px 6px rgba(0,0,0,0.1);
     text-indent: 0px;
 }
 
@@ -477,7 +475,6 @@ margin on the iframe, cause it breaks stuff. */
     line-height: 1.3em;
     font-weight: 300;
     font-family: 'Open Sans', sans-serif;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
     text-indent: 0px;
 }
 
@@ -602,7 +599,6 @@ margin on the iframe, cause it breaks stuff. */
     height: 100%;
     z-index: 100;
     background-color: #f8f8f8;
-    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
 }
 
