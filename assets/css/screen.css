@@ -306,7 +306,7 @@ code, tt {
     font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', monospace, sans-serif;
     font-size: 0.85em;
     white-space: pre-wrap;
-    background: #b3cc57;
+    background: #d6d6d6;
     color: #f8f8f2;
     border-radius: 0.3em;
 }
@@ -321,7 +321,7 @@ pre {
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;
-    background: #b3cc57;
+    background: #d6d6d6;
     color: #f8f8f2;
     border-radius: 0.3em;
 }
@@ -474,7 +474,6 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .blog-description {
-    color: #BBC4C9;
     font-size: 1.8rem;
     line-height: 1.3em;
     font-weight: 300;
@@ -603,7 +602,7 @@ margin on the iframe, cause it breaks stuff. */
     width: 370px;
     height: 100%;
     z-index: 100;
-    background-color: #b3cc57;
+    background-color: #D6D6D6;
     text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
 }
@@ -684,7 +683,6 @@ main
 
 #sidebar-links ul
 {
-    color: #BBC4C9;
     font-size: 13px;
     list-style: none inside none;
     padding: 0;
