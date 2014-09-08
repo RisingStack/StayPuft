@@ -1397,11 +1397,9 @@ main {
     clear: both;
     background-color: #aaa;
     border: 0 none;
-    border-radius: 4px;
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-size: 15px;
     font-weight: bold;
     height: 32px;
     line-height: 32px;
@@ -1433,7 +1431,6 @@ main {
 
 #mc_embed_signup label {
     display: block;
-    font-size: 16px;
     padding-bottom: 10px;
     font-weight: bold;
 }
