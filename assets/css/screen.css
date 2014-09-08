@@ -27,76 +27,187 @@ article, aside, details,
 figcaption, figure,
 footer, header, hgroup,
 main, nav, section,
-summary { display: block; }
-audio, canvas, video { display: inline-block; }
-audio:not([controls]) { display: none; height: 0; }
-[hidden], template { display: none; }
+summary {
+    display: block;
+}
+
+audio, canvas, video {
+    display: inline-block;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden], template {
+    display: none;
+}
+
 html {
-   font-family: sans-serif;
-   -ms-text-size-adjust: 100%;
-   -webkit-text-size-adjust: 100%;
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
-body { margin: 0; }
-a { background: transparent; }
-a:focus { outline: thin dotted; }
-a:active, a:hover { outline: 0; }
-h1 { font-size: 2em; margin: 0.67em 0; }
-abbr[title] { border-bottom: 1px dotted; }
-b, strong { font-weight: bold; }
-dfn { font-style: italic; }
+
+body {
+    margin: 0;
+}
+
+a {
+    background: transparent;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
 hr {
-   -moz-box-sizing: content-box;
-   box-sizing: content-box;
-   height: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
 }
-mark { background: #ff0; color: #000; }
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
 code, kbd, pre,
-samp { font-family: monospace, serif; font-size: 1em; }
-pre { white-space: pre-wrap; }
-q { quotes: "\201C" "\201D" "\2018" "\2019"; }
-small { font-size: 80%; }
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+small {
+    font-size: 80%;
+}
+
 sub, sup {
-   font-size: 75%;
-   line-height: 0;
-   position: relative;
-   vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-img { border: 0; }
-svg:not(:root) { overflow: hidden; }
-figure { margin: 0; }
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
 fieldset {
-   border: 1px solid #c0c0c0;
-   margin: 0 2px;
-   padding: 0.35em 0.625em 0.75em;
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
 }
-legend { border: 0; padding: 0; }
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
 button, input, select,
-textarea { font-family: inherit; font-size: 100%; margin: 0; }
-button, input { line-height: normal; }
-button, select { text-transform: none; }
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, select {
+    text-transform: none;
+}
+
 button, html input[type="button"],
 input[type="reset"], input[type="submit"] {
-   -webkit-appearance: button;
-   cursor: pointer;
+    -webkit-appearance: button;
+    cursor: pointer;
 }
-button[disabled], html input[disabled] { cursor: default; }
-input[type="checkbox"],
-input[type="radio"] { box-sizing: border-box; padding: 0; }
-input[type="search"] {
-   -webkit-appearance: textfield;
-   -moz-box-sizing: content-box;
-   -webkit-box-sizing: content-box;
-   box-sizing: content-box;
-}
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-button::-moz-focus-inner,
-input::-moz-focus-inner { border: 0; padding: 0; }
-textarea { overflow: auto; vertical-align: top; }
-table { border-collapse: collapse; border-spacing: 0; }
 
+button[disabled], html input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 /* ==========================================================================
    1. Icons - Sets up the icon font and respective classes
@@ -105,11 +216,8 @@ table { border-collapse: collapse; border-spacing: 0; }
 /* Import the font file with the icons in it */
 @font-face {
     font-family: 'icons';
-    src:url('../fonts/icons.eot');
-    src:url('../fonts/icons.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/icons.woff') format('woff'),
-        url('../fonts/icons.ttf') format('truetype'),
-        url('../fonts/icons.svg#icons') format('svg');
+    src: url('../fonts/icons.eot');
+    src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.ttf') format('truetype'), url('../fonts/icons.svg#icons') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -137,20 +245,23 @@ table { border-collapse: collapse; border-spacing: 0; }
 .icon-ghost:before {
     content: "\e000";
 }
+
 .icon-feed:before {
     content: "\e001";
 }
+
 .icon-twitter:before {
     content: "\e002";
     font-size: 1.1em;
 }
+
 .icon-google-plus:before {
     content: "\e003";
 }
+
 .icon-facebook:before {
     content: "\e004";
 }
-
 
 /* ==========================================================================
    2. General - Setting up some base styles
@@ -233,7 +344,6 @@ h4 a, h5 a, h6 a {
     color: #123E2D;
 }
 
-
 p, ul, ol, dl {
     margin: 1.6em 0;
 }
@@ -285,17 +395,21 @@ blockquote p {
 blockquote small {
     display: inline-block;
     margin: 0.8em 0 0.8em 1.5em;
-    font-size:0.9em;
+    font-size: 0.9em;
     color: #ccc;
 }
 
-blockquote small:before { content: '\2014 \00A0'; }
-
-blockquote cite {
-    font-weight:bold;
+blockquote small:before {
+    content: '\2014 \00A0';
 }
 
-blockquote cite a { font-weight: normal; }
+blockquote cite {
+    font-weight: bold;
+}
+
+blockquote cite a {
+    font-weight: normal;
+}
 
 mark {
     background-color: #ffc336;
@@ -345,16 +459,14 @@ kbd {
     font-weight: bold;
     background: #f4f4f4;
     border-radius: 4px;
-    box-shadow:
-        0 1px 0 rgba(0, 0, 0, 0.2),
-        0 1px 0 0 #fff inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
 }
 
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.6em 0;
-    width:100%;
+    width: 100%;
     max-width: 100%;
     background-color: transparent;
 }
@@ -368,7 +480,9 @@ table td {
     border-top: 1px solid #efefef;
 }
 
-table th { color: #000; }
+table th {
+    color: #000;
+}
 
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
@@ -379,9 +493,13 @@ table thead:first-child tr:first-child td {
     border-top: 0;
 }
 
-table tbody + tbody { border-top: 2px solid #efefef; }
+table tbody + tbody {
+    border-top: 2px solid #efefef;
+}
 
-table table table { background-color: #fff; }
+table table table {
+    background-color: #fff;
+}
 
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
@@ -390,7 +508,7 @@ table tbody > tr:nth-child(odd) > th {
 
 table.plain tbody > tr:nth-child(odd) > td,
 table.plain tbody > tr:nth-child(odd) > th {
-   background: transparent;
+    background: transparent;
 }
 
 iframe, .fluid-width-video-wrapper {
@@ -404,7 +522,6 @@ margin on the iframe, cause it breaks stuff. */
     margin: 0;
 }
 
-
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
@@ -415,8 +532,14 @@ margin on the iframe, cause it breaks stuff. */
     content: " ";
     display: table;
 }
-.clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
 
 /* Hides shit */
 .hidden {
@@ -438,7 +561,6 @@ margin on the iframe, cause it breaks stuff. */
     display: table-cell;
     vertical-align: middle;
 }
-
 
 /* ==========================================================================
    4. General - The main styles for the the theme
@@ -507,7 +629,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-title {
-    margin:0;
+    margin: 0;
     color: #123E2D;
 }
 
@@ -542,8 +664,7 @@ margin on the iframe, cause it breaks stuff. */
     text-decoration: underline;
 }
 
-.post-meta i
-{
+.post-meta i {
     width: 17px;
 }
 
@@ -590,8 +711,7 @@ margin on the iframe, cause it breaks stuff. */
     line-height: 1.5em;
 }
 
-#sidebar
-{
+#sidebar {
     position: fixed;
     top: 0px;
     left: 0px;
@@ -602,8 +722,7 @@ margin on the iframe, cause it breaks stuff. */
     overflow-y: auto;
 }
 
-main
-{
+main {
     position: absolute;
     left: 370px;
     right: 0px;
@@ -612,20 +731,18 @@ main
     padding: 40px 15%;
 }
 
-#search
-{
+#search {
     display: block;
     width: 100%;
 }
 
-#search input
-{
+#search input {
     width: 100%;
     font-size: 0.8em;
     border: none;
     border-radius: 12px;
-    box-sizing:border-box;
-    -moz-box-sizing:border-box;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
     padding-left: 10px;
     padding-right: 30px;
 }
@@ -638,23 +755,20 @@ main
     margin-top: 1px;
     right: 10px;
     position: absolute; /* must be set to absolute */
-} 
+}
 
-#results
-{
+#results {
     text-align: center;
     margin-bottom: 4rem;
 }
 
-#results > p
-{
+#results > p {
     color: #BBB;
     font-size: 1.4rem;
     margin: 0;
 }
 
-#results > a
-{
+#results > a {
     display: block;
     background-color: #F5F5F5;
     border-radius: 10px;
@@ -663,65 +777,54 @@ main
     margin-bottom: 1rem;
 }
 
-#results h2
-{
+#results h2 {
     font-size: 2.5rem;
     font-weight: 400;
 }
 
-#results h4
-{
+#results h4 {
     font-size: 1.4rem;
     font-weight: 400;
     color: #BBB;
 }
 
-#sidebar-links ul
-{
+#sidebar-links ul {
     font-size: 13px;
     list-style: none inside none;
     padding: 0;
 }
 
-#sidebar-links i
-{
+#sidebar-links i {
     width: 18px;
     font-size: 16px;
 }
 
-#sidebar-links a
-{
+#sidebar-links a {
     text-decoration: none;
 }
 
-#sidebar-links a:hover
-{
+#sidebar-links a:hover {
     color: #A2B537;
 }
 
-.post-indexfooter
-{
+.post-indexfooter {
     margin: 1rem 0;
 }
 
-.post-indexfooter a
-{
+.post-indexfooter a {
     font-weight: bold;
     text-decoration: none;
 }
 
-.post-time .fulldate
-{
+.post-time .fulldate {
     display: none;
 }
 
-.post-time:hover .timeago
-{
+.post-time:hover .timeago {
     display: none;
 }
 
-.post-time:hover .fulldate
-{
+.post-time:hover .fulldate {
     display: inline;
 }
 
@@ -798,6 +901,7 @@ main
 .author-meta a {
     color: #9EABB3;
 }
+
 .author-meta a:hover {
     color: #A2B537;
 }
@@ -896,7 +1000,6 @@ main
     font-size: 1.1rem;
 }
 
-
 /* ==========================================================================
    8. Pagination - Tools to let you flick between pages
    ========================================================================== */
@@ -946,7 +1049,6 @@ main
 .newer-posts:hover {
     border-color: #9EABB3;
 }
-
 
 /* ==========================================================================
    9. Footer - The bottom of every page
@@ -1014,7 +1116,7 @@ main
 
 /* Add a box shadow to on hover */
 .subscribe:hover {
-    box-shadow: rgba(0,0,0,0.05) 0 0 0 3px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 3px;
     transition: box-shadow 0.25s;
 }
 
@@ -1024,35 +1126,35 @@ main
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
 .tooltip {
-    opacity:0;
+    opacity: 0;
     display: inline-block;
     padding: 4px 8px 5px 8px;
-    position:absolute;
+    position: absolute;
     top: -23px;
     left: -21px;
-    color: rgba(255,255,255,0.9);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.1rem;
     line-height: 1em;
     text-align: center;
     background: #50585D;
-    border-radius:20px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
     transition: opacity 0.3s ease, top 0.3s ease;
 }
 
 /* The little chiclet arrow under the tooltip, pointing down */
 .tooltip:after {
-    content:"";
-    border-width:5px 5px 0 5px;
-    border-style:solid;
+    content: "";
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
     border-color: #50585D transparent;
-    display:block;
-    position:absolute;
-    bottom:-4px;
-    left:50%;
-    margin-left:-5px;
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left: -5px;
     z-index: 220;
-    width:0;
+    width: 0;
 }
 
 /* On hover, show the tooltip! */
@@ -1075,7 +1177,7 @@ main
     }
 
     #sidebar-content {
-        position: relative:;
+        position: relative :;
         top: 0px;
     }
 
@@ -1154,7 +1256,6 @@ main
    11. Media Queries - Smaller than 500px
    ========================================================================== */
 
-
 @media only screen and (max-width: 500px) {
 
     .blog-logo img {
@@ -1169,7 +1270,7 @@ main
     }
 
     .post {
-        width:auto;
+        width: auto;
     }
 
     h1, h2 {
@@ -1210,8 +1311,7 @@ main
         font-size: 13px;
     }
 
-    .post-meta i
-    {
+    .post-meta i {
         width: 15px;
     }
 
@@ -1261,3 +1361,134 @@ main
    End of file. Media queries should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
    ========================================================================== */
+
+/* MailChimp Form Embed Code - Slim - 08/17/2011 */
+#mc_embed_signup form {
+    display: block;
+    position: relative;
+    text-align: left;
+}
+
+#mc_embed_signup h2 {
+    font-weight: bold;
+    padding: 0;
+    margin: 15px 0;
+    font-size: 1.4em;
+}
+
+#mc_embed_signup input {
+    border: 1px solid #999;
+    -webkit-appearance: none;
+}
+
+#mc_embed_signup input[type=checkbox] {
+    -webkit-appearance: checkbox;
+}
+
+#mc_embed_signup input[type=radio] {
+    -webkit-appearance: radio;
+}
+
+#mc_embed_signup input:focus {
+    border-color: #333;
+}
+
+#mc_embed_signup .button {
+    clear: both;
+    background-color: #aaa;
+    border: 0 none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 5px 10px 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto;
+}
+
+#mc_embed_signup .button:hover {
+    background-color: #777;
+}
+
+#mc_embed_signup .small-meta {
+    font-size: 11px;
+}
+
+#mc_embed_signup .nowrap {
+    white-space: nowrap;
+}
+
+#mc_embed_signup .clear {
+    clear: none;
+    display: inline;
+}
+
+#mc_embed_signup label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+#mc_embed_signup input.email {
+    display: block;
+    padding: 8px 0;
+    margin: 0 4% 10px 0;
+    text-indent: 5px;
+    width: 58%;
+    min-width: 130px;
+}
+
+#mc_embed_signup input.button {
+    display: block;
+    width: 35%;
+    margin: 0 0 10px 0;
+    min-width: 90px;
+}
+
+#mc_embed_signup div#mce-responses {
+    float: left;
+    top: -1.4em;
+    padding: 0em .5em 0em .5em;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 5%;
+    clear: both;
+}
+
+#mc_embed_signup div.response {
+    margin: 1em 0;
+    padding: 1em .5em .5em 0;
+    font-weight: bold;
+    float: left;
+    top: -1.5em;
+    z-index: 1;
+    width: 80%;
+}
+
+#mc_embed_signup #mce-error-response {
+    display: none;
+}
+
+#mc_embed_signup #mce-success-response {
+    color: #529214;
+    display: none;
+}
+
+#mc_embed_signup label.error {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 1.05em;
+    text-align: left;
+    padding: .5em 0;
+}
+
