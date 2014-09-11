@@ -634,7 +634,8 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-title a {
-    text-decoration: none;
+    text-decoration: underline;
+    font-size: 5rem;
 }
 
 .post-excerpt p {
