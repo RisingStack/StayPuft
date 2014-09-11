@@ -607,6 +607,7 @@ margin on the iframe, cause it breaks stuff. */
     border-bottom: #EBF2F6 1px solid;
     word-break: break-word;
     hyphens: auto;
+    margin-bottom: 60px;
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
@@ -634,7 +635,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-title a {
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 5rem;
 }
 
