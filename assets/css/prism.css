@@ -7,7 +7,7 @@
 
 code[class*="language-"],
 pre[class*="language-"] {
-	color: #f8f8f2;
+	color: #1e1e1e;
 	text-shadow: 0 1px rgba(0,0,0,0.3);
 	font-family: Inconsolata, Consolas, Monaco, 'Andale Mono', monospace, sans-serif;
 	direction: ltr;
@@ -36,7 +36,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #b3cc57;
+	background: #d6d6d6;
 }
 
 /* Inline code */
