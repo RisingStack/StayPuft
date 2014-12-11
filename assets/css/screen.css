@@ -215,52 +215,64 @@ table {
 
 /* Import the font file with the icons in it */
 @font-face {
-    font-family: 'icons';
-    src: url('../fonts/icons.eot');
-    src: url('../fonts/icons.eot?#iefix') format('embedded-opentype'), url('../fonts/icons.woff') format('woff'), url('../fonts/icons.ttf') format('truetype'), url('../fonts/icons.svg#icons') format('svg');
+    font-family: "casper-icons";
+    src:url("../fonts/casper-icons.eot");
+    src:url("../fonts/casper-icons.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/casper-icons.woff") format("woff"),
+        url("../fonts/casper-icons.ttf") format("truetype"),
+        url("../fonts/casper-icons.svg#icons") format("svg");
     font-weight: normal;
     font-style: normal;
 }
 
 /* Apply these base styles to all icons */
-.icon-ghost:before,
-.icon-feed:before,
-.icon-twitter:before,
-.icon-google-plus:before,
-.icon-facebook:before {
-    font-family: 'icons';
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "casper-icons", "Open Sans", sans-serif;
     speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    text-decoration: none;
+    text-decoration: none !important;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Each icon is created by inserting the corret character into the
+/* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
 .icon-ghost:before {
-    content: "\e000";
+    content: "\f600";
 }
 
 .icon-feed:before {
-    content: "\e001";
+    content: "\f601";
 }
 
 .icon-twitter:before {
-    content: "\e002";
+    content: "\f602";
     font-size: 1.1em;
 }
 
 .icon-google-plus:before {
-    content: "\e003";
+    content: "\f603";
 }
 
 .icon-facebook:before {
-    content: "\e004";
+    content: "\f604";
+}
+.icon-arrow-left:before {
+    content: "\f605";
+}
+.icon-stats:before {
+    content: "\f606";
+}
+.icon-location:before {
+    content: "\f607";
+    margin-left: -3px; /* Tracking fix */
+}
+.icon-link:before {
+    content: "\f608";
 }
 
 /* ==========================================================================
@@ -331,8 +343,9 @@ h6 {
 }
 
 a {
-    color: #4a4a4a;
+    color: #57A3E8;
     transition: color ease 0.3s;
+    text-decoration: none;
 }
 
 a:hover {
@@ -552,7 +565,6 @@ margin on the iframe, cause it breaks stuff. */
 .inner {
     position: relative;
     width: 80%;
-    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -575,13 +587,38 @@ margin on the iframe, cause it breaks stuff. */
     display: block;
     max-height: 100px;
     width: auto;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     line-height: 0;
+}
+
+.subscribe-button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 38px;
+    padding: 0 20px;
+    border: rgba(0,0,0,0.3) 1px solid;
+    color: #9EABB3;
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 35px;
+    white-space: nowrap;
+    border-radius: 3px;
+    background: none;
+    transition: all ease 0.3s;
+    text-decoration: none;
+}
+
+.subscribe-button:before {
+    font-size: 9px;
+    margin-right: 6px;
 }
 
 /* The details of your blog. Defined in ghost/settings/ */
 .blog-title {
-    margin: 10px 0 10px 0;
+    margin: 0 0 10px 0;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
     text-indent: 0px;
@@ -603,7 +640,7 @@ margin on the iframe, cause it breaks stuff. */
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    max-width: 800px;
+    max-width: inherit;
     border-bottom: #EBF2F6 1px solid;
     word-break: break-word;
     hyphens: auto;
@@ -651,9 +688,10 @@ margin on the iframe, cause it breaks stuff. */
 
 .post-meta {
     display: inline-block;
-    margin: 0 0 5px 0;
+    margin: 8px 0;
     font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
+    font-size: 14px;
+    line-height: 1.4em;
     color: #9EABB3;
 }
 
@@ -667,7 +705,8 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-meta i {
-    width: 17px;
+    width: 18px;
+    font-size: 14px;
 }
 
 .user-meta {
@@ -717,7 +756,7 @@ margin on the iframe, cause it breaks stuff. */
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 370px;
+    width: 320px;
     height: 100%;
     z-index: 100;
     background-color: #f8f8f8;
@@ -726,11 +765,16 @@ margin on the iframe, cause it breaks stuff. */
 
 main {
     position: absolute;
-    left: 370px;
+    left: 320px;
     right: 0px;
     top: 0px;
     bottom: 0px;
-    padding: 40px 8%;
+    padding: 4rem 15%;
+}
+
+.main-inner
+{
+    max-width: 800px;
 }
 
 #search {
@@ -761,7 +805,6 @@ main {
 
 #results {
     text-align: center;
-    margin-bottom: 4rem;
 }
 
 #results > p {
@@ -777,6 +820,9 @@ main {
     text-decoration: none;
     padding: 1rem 2.5rem;
     margin-bottom: 1rem;
+}
+#results > a:last-child {
+    margin-bottom: 4rem;
 }
 
 #results h2 {
@@ -798,7 +844,7 @@ main {
 
 #sidebar-links i {
     width: 18px;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 #sidebar-links a {
@@ -809,8 +855,16 @@ main {
     color: #A2B537;
 }
 
-.post-indexfooter {
-    margin: 1rem 0;
+.post-indexfooter
+{
+    font-size: 14px;
+    margin: 2rem 0;
+}
+
+.post-indexfooter i
+{
+    width: 18px;
+    font-size: 14px;
 }
 
 .post-indexfooter a {
@@ -846,12 +900,6 @@ main {
     display: none;
 }
 
-/* Insert some mad padding up in the header for better spacing */
-.post-template .post-header {
-    padding: 60px 0;
-    text-align: center;
-}
-
 /* Keep images centred and within the bounds of the post-width */
 .post-content img {
     display: block;
@@ -873,7 +921,7 @@ main {
 .post-footer {
     position: relative;
     margin: 4rem 0 4rem 0;
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 0 0 0;
     border-top: #EBF2F6 1px solid;
     border-bottom: #EBF2F6 1px solid;
 }
@@ -972,9 +1020,10 @@ main {
    ========================================================================== */
 
 .tag-archive-header {
-    text-align: left;
-    max-width: 800px;
+    text-align: center;
+    max-width: inherit;
     margin: 3rem 0px;
+    padding: 0 0 30px 0;
     border-bottom: 1px solid #EBF2F6;
 }
 
@@ -985,6 +1034,145 @@ main {
 .tag-archive-header i {
     font-size: 80%;
 }
+
+/* ==========================================================================
+   6. Author profile
+   ========================================================================== */
+
+.post-head.main-header {
+    height: 65%;
+    min-height: 180px;
+}
+
+.post-cover {
+    width: 100%;
+}
+
+.no-cover.post-head.main-header {
+    height: 85px;
+    min-height: 0;
+    margin-bottom: 0;
+    background: transparent;
+}
+
+.tag-head.main-header {
+    height: 40%;
+    min-height: 180px;
+}
+
+.author-head.main-header {
+    height: 40%;
+    min-height: 180px;
+}
+
+.no-cover.author-head.main-header {
+    height: 10%;
+    min-height: 100px;
+    background: transparent;
+}
+
+.author-profile {
+    padding: 0 0 30px 0;
+    border-bottom: #EBF2F6 1px solid;
+    text-align: center;
+    margin-bottom: 2rem;
+    max-width: inherit;
+}
+
+.author-cover {
+    background: transparent no-repeat center;
+    width: 100%;
+    background-size: 100%;
+    min-height: 220px;
+    margin: 0 0 40px 0;
+    position: relative;
+}
+
+.author-image {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    padding: 6px;
+    background: #fff;
+    z-index: 2;
+    box-shadow: #E7EEF2 0 0 0 1px;
+}
+
+.author-image .img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100%;
+}
+
+.author-profile .author-image {
+    width: 120px;
+    height: 120px;
+    box-shadow: none;
+    float: none;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.author-title {
+    margin: 1.5rem 0 1rem;
+}
+
+.author a {
+    text-decoration: none;
+}
+
+.author-bio {
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    font-weight: 200;
+    color: #50585D;
+    letter-spacing: 0;
+    text-indent: 0;
+}
+
+.author-meta {
+    margin: 1.6rem 0;
+}
+/* Location, website, and link */
+.author-profile .author-meta {
+    margin: 2rem 0;
+    font-family: "Merriweather", serif;
+    letter-spacing: 0.01rem;
+    font-size: 1.7rem;
+}
+.author-meta span {
+    display: inline-block;
+    margin: 0 2rem 1rem 0;
+    word-wrap: break-word;
+}
+.author-meta a {
+    text-decoration: none;
+}
+
+/* Turn off meta for page2+ to make room for extra
+   pagination prev/next links */
+.archive-template .author-profile .author-meta {
+    display: none;
+}
+
 
 /* ==========================================================================
    7. Third Party Elements - Embeds from other services
@@ -1002,6 +1190,11 @@ main {
     font-size: 1.1rem;
 }
 
+/* Pastebin */
+.content .embedPastebin {
+    margin-bottom: 1.75em;
+}
+
 /* ==========================================================================
    8. Pagination - Tools to let you flick between pages
    ========================================================================== */
@@ -1009,13 +1202,12 @@ main {
 /* The main wrapper for our pagination links */
 .pagination {
     position: relative;
-    width: 80%;
-    max-width: 800px;
-    margin: 4rem 0px;
+    margin: 3rem 0px;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
     text-align: center;
+    max-width: inherit;
 }
 
 .pagination a {
@@ -1059,7 +1251,7 @@ main {
 .site-footer {
     position: relative;
     margin-top: 2rem;
-    max-width: 800px;
+    max-width: inherit;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
@@ -1336,6 +1528,16 @@ main {
         margin: 1.4rem 0.8rem 0 0.8rem;
     }
 
+    .author-meta li {
+        float: none;
+        margin: 0;
+        line-height: 1.6em;
+    }
+
+    .author-meta li:before {
+        display: none;
+    }
+
     .older-posts,
     .newer-posts {
         position: static;
@@ -1490,4 +1692,3 @@ main {
     text-align: left;
     padding: .5em 0;
 }
-

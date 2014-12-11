@@ -5,6 +5,8 @@
 
 <header class="tag-archive-header">
     <h4><i class="fa fa-tag"></i><span class="tag-archive-header-name">{{tag.name}}</span></h4>
+
+    <a class="subscribe-button icon-feed" href="{{url}}rss/">Subscribe to this tag</a>
 </header>
 
 {{! Each post will be output using this markup }}
@@ -12,22 +14,26 @@
 
 <article class="{{post_class}}">
     <header class="post-header">
-        <div class="post-meta">
+        {{#if image}}
+            <img class="post-cover" src="{{image}}" alt="{{title}}">
+        {{/if}}
+
+        <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+        
+        <section class="post-meta">
             <span class="post-time">
                 <i class='fa fa-calendar'></i>
                 <time datetime="{{date format="YYYY-MM-DD"}}" class="timeago">{{date timeago="true"}}</time>
                 <time datetime="{{date format="YYYY-MM-DD"}}" class="fulldate">{{date format="MMMM Do, YYYY"}}</time>
             </span>
             {{tags prefix="<br><i class='fa fa-tag'></i> " separator=" · "}}
-        </div>
-        <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
-
+        </section>
     </header>
     <section class="post-content">
         {{content}}
     </section>
     <footer class="post-indexfooter">
-        <i class="fa fa-comments"></i> <a href="{{url}}#disqus_thread">Comments</a>
+        <i class="fa fa-comment-o"></i> <a href="{{url}}#disqus_thread">Comments</a>
     </footer>
 </article>
 

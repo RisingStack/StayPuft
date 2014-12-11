@@ -34,6 +34,7 @@
 
     <div id="sidebar" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
         <div id="sidebar-content" class="inner">
+
             {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="RisingStack logo" /></a>{{/if}}
             <h2 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
             <h3 class="blog-description">{{@blog.description}}</h2>
@@ -60,13 +61,16 @@
             <footer class="site-footer">
                 <section class="copyright">{{> copyright}}</section>
                 <section class="poweredby">Proudly published with <a class="icon-ghost" href="https://ghost.org">Ghost</a></section>
+                <section class="theme-credits"><a href="https://github.com/dlecina/StayPuft">StayPuft theme</a> by David Lecina</section>
             </footer>
         </div>
     </div>
 
     <main>
-        <section id="results"></section>
-        {{{body}}}
+        <div class="main-inner">
+            <section id="results"></section>
+            {{{body}}}
+        </div>
     </main>
 
     {{! Ghost outputs important scripts and data with this tag }}
@@ -74,11 +78,12 @@
 
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/prism-loader.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/prism.js"}}"></script>
-
     <script src="{{asset "js/jquery.ghostHunter.min.js"}}"></script>
     <script>
         $("#search-field").ghostHunter({
+            rss : "{{@blog.url}}/rss",
             results : "#results",
             onKeyUp : true,
             zeroResultsInfo : false

@@ -2,6 +2,14 @@
 
 A fork of Casper, the default theme for [Ghost](https://github.com/tryghost/ghost/).
 
+## Ghost Version
+
+StayPuft tries to match Casper's version numbering system. That is, StayPuft version A.B.C should roughly have the same (or more) features as Casper version A.B.C. Features and bug fixes may be added between major versions, so the best way to stay updated is to clone and pull changes from the repo.
+
+**The current StayPuft version is 1.1.3, and should work with Ghost 0.5.6, as well as some (but not all) older versions.**
+
+If the current version of StayPuft is not compatible with the version of Ghost you're running, try looking for an older one in the [Releases section](https://github.com/dlecina/StayPuft/releases).
+
 ## Features
 
 * Responsive design.
@@ -16,8 +24,8 @@ A fork of Casper, the default theme for [Ghost](https://github.com/tryghost/ghos
 
 This theme is being used in my [blog](http://davidlecina.com/).
 
-*  ["Welcome to Ghost" post](http://davidlecina.com/welcome-to-ghost/).
-*  [Prism demo](http://davidlecina.com/prism-demo/).
+*  ["Welcome to Ghost" post](http://davidlecina.com/blog/welcome-to-ghost/).
+*  [Prism demo](http://davidlecina.com/blog/prism-demo/).
 
 ## Installation
 
