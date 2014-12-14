@@ -28,6 +28,13 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
 
     {{> google-analytics}}
+
+    <!-- Begin MailChimp Signup Form -->
+    <style type="text/css">
+      #mc_embed_signup{clear:left; }
+      /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
 </head>
 
 <body class="{{body_class}}">
@@ -36,7 +43,7 @@
         <div id="sidebar-content" class="inner">
 
             {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="RisingStack logo" /></a>{{/if}}
-            <h2 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+            <h2 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h2>
             <h3 class="blog-description">{{@blog.description}}</h2>
 
             <form id="search">
