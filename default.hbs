@@ -27,8 +27,6 @@
 
     <link rel="stylesheet" type="text/css" href="{{asset "css/prism.css"}}" />
 
-    {{> google-analytics}}
-
     <!-- Begin MailChimp Signup Form -->
     <style type="text/css">
       #mc_embed_signup{clear:left; }
@@ -38,6 +36,7 @@
 </head>
 
 <body class="{{body_class}}">
+    {{> google-analytics}}
 
     <div id="sidebar" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
         <div id="sidebar-content" class="inner">
