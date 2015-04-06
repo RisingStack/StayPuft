@@ -965,7 +965,7 @@ main {
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
-.post-footer .share {
+.post-footer .hire-the-author {
     position: absolute;
     top: 4rem;
     right: 0;
@@ -973,24 +973,12 @@ main {
     text-align: center;
 }
 
-.post-footer .share a {
-    font-size: 3rem;
+.post-footer .hire-the-author a {
+    font-size: 1.5rem;
     display: inline-block;
     margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
     text-decoration: none;
-}
-
-.post-footer .share a.fa:first-child {
-    margin-left: 0;
-}
-
-.post-footer .share a.fa:last-child {
-    margin-right: 0;
-}
-
-.post-footer .share a:hover {
-    color: #50585D;
+    font-weight: bold;
 }
 
 .author-image {
