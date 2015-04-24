@@ -672,6 +672,7 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .post-title a {
+    line-height: 1em;
     text-decoration: none;
     font-size: 5rem;
 }
@@ -978,7 +979,10 @@ main {
     display: inline-block;
     margin: 1rem 1.6rem 1.6rem 0;
     text-decoration: none;
-    font-weight: bold;
+    background-color: #57A3E8;
+    border-radius: 3px;
+    padding: 3px 8px;
+    color: #ffffff;
 }
 
 .author-image {
