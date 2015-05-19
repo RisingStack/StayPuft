@@ -966,6 +966,7 @@ main {
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
+
 .post-footer .hire-the-author {
     position: absolute;
     top: 4rem;
@@ -983,6 +984,13 @@ main {
     border-radius: 3px;
     padding: 3px 8px;
     color: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .post-footer .hire-the-author {
+        position: relative;
+        top: 0;
+    }
 }
 
 .author-image {
