@@ -1258,6 +1258,12 @@ main {
     color: #123E2D;
 }
 
+@media (max-width: 600px) {
+    .site-footer {
+        display: none;
+    }
+}
+
 .site-footer a {
     color: #123E2D;
     text-decoration: none;
@@ -1691,4 +1697,22 @@ main {
     margin-left: 1.05em;
     text-align: left;
     padding: .5em 0;
+}
+
+@media (min-width: 600px) {
+    .post #mc_embed_signup {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .post #mc_embed_signup {
+        display: block;
+    }
+    #mc_embed_signup {
+        display: none;
+    }
+    #subscription-links {
+        display: none;
+    }
 }
