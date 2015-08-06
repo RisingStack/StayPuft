@@ -856,6 +856,12 @@ main {
     color: #A2B537;
 }
 
+#sidebar-links a.new {
+    font-size: 8px;
+    color: red;
+    vertical-align: text-bottom;
+}
+
 .post-indexfooter
 {
     font-size: 14px;
