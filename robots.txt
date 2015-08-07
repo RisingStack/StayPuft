@@ -1,0 +1,6 @@
+User-agent: *
+Sitemap: https://blog.risingstack.com/sitemap.xml
+Disallow: /ghost/
+Disallow: /privacy-policy/
+Disallow: /thank-you/
+Disallow: /the-challenges-of-logging-microservices/
