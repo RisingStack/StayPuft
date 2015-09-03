@@ -859,7 +859,8 @@ main {
 #sidebar-links a.new {
     font-size: 8px;
     color: red;
-    vertical-align: text-bottom;
+    position: relative;
+    bottom: 5px;
 }
 
 .post-indexfooter
